@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Notes!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="gradient">
+    <!-- nav -->
+    <nav class="bg-pink-600 text-white px-4 py-2 flex justify-between items-center shadow-md">
+        <h1 class="text-3xl font-bold">Guess the Notes!</h1>
+        <ul class="flex space-x-4">
+            <!-- <li><a href="#" class="hover:text-gray-200">How to Play</a></li>
+      <li><a href="#" class="hover:text-gray-200">About</a></li> -->
+        </ul>
+    </nav>
+    <!-- main -->
+    <main class="container flex justify-center h-screen">
+<!-- display message -->
+        <span id="message" class="mt-4"></span>
+
+        <!-- container -->
+        <div class="flex flex-col items-center">
+            <!-- notes sections -->
+            <div class="flex mt-8">
+                <div class="bg-gray-200 rounded-full p-4 mr-4">
+                    <p class="noteOne text-lg font-medium text-center">1</p>
+                    <span id="note1" class="text-pink-600 text-2xl font-bold text-center">&#9835;</span>
+                </div>
+                <div class="bg-gray-200 rounded-full p-4">
+                    <p class="noteTwo text-lg font-medium text-center"></p>
+                    <span id="note2" class="text-teal-500 text-2xl font-bold text-center">&#9834;</span>
+                </div>
+            </div>
+            <!-- randomize button -->
+            <button type="button" id="randomizeButton"
+                class=" randomizeButton bg-pink-600 text-white rounded px-4 py-2 hover:bg-pink-700 mt-8">
+                <i class="fa fa-random" style="font-size:15px;color:pink"></i> Randomize
+            </button>
+            <!-- guess check asnswer section -->
+            <div class="mt-16">
+                <form class="flex">
+                    <input type="text" id="answer"
+                        class="border border-pink-600 rounded px-2 py-1 mr-2 focus:outline-pink-500">
+                    <button type="submit"
+                        class="bg-pink-600 text-white rounded px-4 py-2 hover:bg-pink-700">Guess</button>
+                </form>
+            </div>
+        </div>
+        <!--  js script link  -->
+        <script type='module' src="./index.js"></script>
+    </main>
+
+</body>
+
+</html>
